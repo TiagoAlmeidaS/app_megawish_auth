@@ -1,6 +1,6 @@
 {
-  "id": "discord",
-  "realm": "discord",
+  "id": "megawish",
+  "realm": "megawish",
   "notBefore": 0,
   "revokeRefreshToken": false,
   "refreshTokenMaxReuse": 0,
@@ -48,7 +48,7 @@
         "description": "${role_offline-access}",
         "composite": false,
         "clientRole": false,
-        "containerId": "discord",
+        "containerId": "megawish",
         "attributes": {}
       },
       {
@@ -57,7 +57,7 @@
         "description": "${role_uma_authorization}",
         "composite": false,
         "clientRole": false,
-        "containerId": "discord",
+        "containerId": "megawish",
         "attributes": {}
       }
     ],
@@ -483,7 +483,7 @@
       "clientId": "account",
       "name": "${client_account}",
       "rootUrl": "${authBaseUrl}",
-      "baseUrl": "/realms/discord/account/",
+      "baseUrl": "/realms/megawish/account/",
       "surrogateAuthRequired": false,
       "enabled": true,
       "alwaysDisplayInConsole": false,
@@ -494,7 +494,7 @@
         "view-profile"
       ],
       "redirectUris": [
-        "/realms/discord/account/*"
+        "/realms/megawish/account/*"
       ],
       "webOrigins": [],
       "notBefore": 0,
@@ -530,14 +530,14 @@
       "clientId": "account-console",
       "name": "${client_account-console}",
       "rootUrl": "${authBaseUrl}",
-      "baseUrl": "/realms/discord/account/",
+      "baseUrl": "/realms/megawish/account/",
       "surrogateAuthRequired": false,
       "enabled": true,
       "alwaysDisplayInConsole": false,
       "clientAuthenticatorType": "client-secret",
       "secret": "**********",
       "redirectUris": [
-        "/realms/discord/account/*"
+        "/realms/megawish/account/*"
       ],
       "webOrigins": [],
       "notBefore": 0,
@@ -906,14 +906,14 @@
       "clientId": "security-admin-console",
       "name": "${client_security-admin-console}",
       "rootUrl": "${authAdminUrl}",
-      "baseUrl": "/admin/discord/console/",
+      "baseUrl": "/admin/megawish/console/",
       "surrogateAuthRequired": false,
       "enabled": true,
       "alwaysDisplayInConsole": false,
       "clientAuthenticatorType": "client-secret",
       "secret": "**********",
       "redirectUris": [
-        "/admin/discord/console/*"
+        "/admin/megawish/console/*"
       ],
       "webOrigins": [
         "+"
