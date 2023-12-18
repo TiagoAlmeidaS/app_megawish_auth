@@ -4,21 +4,23 @@ services:
 
   app:
     image: quay.io/keycloak/keycloak:21.1
-    command: start-dev
+    command: 
+      - start-dev
+      - -Dkeycloak.profile.feature.upload_scripts=enabled
     container_name: micro-auth-app
-    # command: -Dkeycloak.profile.feature.upload_scripts=enabled
     environment:
-      # - KEYCLOAK_IMPORT=realm-export.json
       - KEYCLOAK_ADMIN=admin
       - KEYCLOAK_ADMIN_PASSWORD=admin
       - KC_DB=mysql
       - KC_DB_URL=jdbc:mysql://db:3306/client_auth
       - KC_DB_USERNAME=root
       - KC_DB_PASSWORD=root
+      - KC_IMPORT=/tmp/realm-export.json
     ports:
       - 8080:8080
-    # volumes: 
-    #   - ./themes/slack:/opt/jboss/keycloak/themes/slack
+    volumes: 
+      - ./themes/slack:/opt/jboss/keycloak/themes/slack
+      - ./realm-export.json:/tmp/realm-export.json
     depends_on: 
       db:
         condition: service_healthy
